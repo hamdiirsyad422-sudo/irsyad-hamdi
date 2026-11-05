@@ -1,0 +1,282 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.logo span,
+.hero-text span,
+.section-title span {
+    color: #38bdf8;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.welcome {
+    color: #38bdf8;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    font-size: 23px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    line-height: 1.8;
+    color: #cbd5e1;
+}
+
+.hero-image img {
+    width: 320px;
+    border-radius: 20px;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 0 30px #38bdf830;
+}
+
+/* BUTTON */
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn,
+.btn-outline {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn {
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+}
+
+.btn-outline:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+/* SECTION */
+section:not(.hero) {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 45px;
+}
+
+/* ABOUT */
+.about-box {
+    max-width: 800px;
+    margin: auto;
+    background: #1e293b;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 2;
+    color: #cbd5e1;
+}
+
+/* EDUCATION */
+.education-container,
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    border-bottom: 3px solid #38bdf8;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: #273449;
+}
+
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.card span {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* SKILLS */
+.skill-container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill h3 {
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 12px;
+    background: #334155;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: #38bdf8;
+    border-radius: 20px;
+}
+
+/* EXPERIENCE */
+.experience-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* CONTACT */
+.contact-box {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    background: #1e293b;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 2.5;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #111827;
+    color: #94a3b8;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-image img {
+        width: 230px;
+    }
+
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .education-container,
+    .experience-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
